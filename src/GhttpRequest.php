@@ -33,9 +33,10 @@ class GhttpRequest
 
     public function withoutRedirecting()
     {
-        return $this->options = array_merge_recursive($this->options, [
+        $this->options = array_merge_recursive($this->options, [
                 'allow_redirects' => false
         ]);
+        return $this;
     }
 
     public function asJson()
@@ -51,6 +52,7 @@ class GhttpRequest
     public function bodyFormat($format)
     {
         $this->bodyFormat = $format;
+        return $this;
     }
 
     public function contentType($contentType)
@@ -65,9 +67,10 @@ class GhttpRequest
 
     public function withHeaders($headers)
     {
-        return $this->options = array_merge_recursive($this->options, [
+        $this->options = array_merge_recursive($this->options, [
                 'headers' => $headers
         ]);
+        return $this;
     }
 
     public function get($url, $queryParams = [])
