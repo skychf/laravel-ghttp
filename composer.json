@@ -1,0 +1,21 @@
+{
+    "name": "skychf/ghttp",
+    "description": "a simple http client for laravel",
+    "keywords": ["http", "guzzle"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Skychf",
+            "email": "skychf@qq.com"
+        }
+    ],
+    "require": {
+        "php": ">=7.0",
+        "guzzlehttp/guzzle": "^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Skychf\\Ghttp\\": "src/"
+        }
+    }
+}
